@@ -1,10 +1,10 @@
 import "./index.css";
-import React from "react";
+import { Router } from "./Routes";
 
 export const App = () => {
   return (
     <>
-      <p className="text-3xl font-bold underline">TEST</p>
+      <Router />
     </>
   );
 };
