@@ -1,7 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: Comfortaa-Regular;
+  src: url('../public/fonts/Comfortaa-Regular.ttf') format('truetype');
+}
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-family: 'Comfortaa-Regular', sans-serif;
 }
