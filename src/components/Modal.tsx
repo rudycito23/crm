@@ -1,7 +1,25 @@
-export const Modal = () => {
+import { MdClear } from "react-icons/md";
+
+interface ModalProps {
+    closeModal: (value: boolean) => void;
+}
+
+export const Modal: React.FC<ModalProps> = ({ closeModal }) => {
+
   return (
     <>
-      <div id="modal-container" className="w-full max-w-xs">
+      <div id="modal-container" className="w-full max-w-xs mx-auto">
+        <div className="flex mt-3 mr-3">
+          <button
+            type="button"
+            className="bg-transparent hover:bg-gray-200 ml-auto rounded-lg text-custom-red"
+            onClick={() => {
+                closeModal(false);
+            }}
+          >
+            <MdClear size={20} />
+          </button>
+        </div>
         <form className="bg-white shadow-md rounded py-1.5 px-8 mb-4">
           <div>
             <h1 className="font-bold my-3.5">Welcome back!</h1>
@@ -37,8 +55,11 @@ export const Modal = () => {
             />
           </div>
           <div className="flex items-center justify-between">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                Sign in
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              Sign in
             </button>
           </div>
         </form>
