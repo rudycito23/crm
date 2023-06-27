@@ -12,7 +12,7 @@ export const Modal: React.FC<ModalProps> = ({ closeModal }) => {
         <div className="flex mt-3 mr-3">
           <button
             type="button"
-            className="bg-transparent hover:bg-gray-200 ml-auto rounded-lg text-custom-red"
+            className="bg-transparent hover:bg-gray-100 hover:text-custom-red hover:col ml-auto rounded-lg text-black"
             onClick={() => {
                 closeModal(false);
             }}
