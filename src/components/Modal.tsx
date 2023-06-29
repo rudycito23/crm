@@ -14,7 +14,7 @@ export const Modal: React.FC<ModalProps> = ({ closeModal }) => {
             type="button"
             className="bg-transparent hover:bg-gray-100 hover:text-custom-red hover:col ml-auto rounded-lg text-black"
             onClick={() => {
-                closeModal(false);
+              closeModal(false);
             }}
           >
             <MdClear size={20} />
@@ -60,6 +60,15 @@ export const Modal: React.FC<ModalProps> = ({ closeModal }) => {
               type="button"
             >
               Sign in
+            </button>
+            <button
+              className="border border-custom-red hover:bg-gray-100 text-custom-red font-bold py-2 px-4 rounded"
+              type="button"
+              onClick={() => {
+                closeModal(false);
+              }}
+            >
+              Cancel
             </button>
           </div>
         </form>
